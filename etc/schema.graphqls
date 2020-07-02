@@ -11,6 +11,7 @@ type Query {
 
 type Mutation {
     addTrainer(input: AddTrainerInput!): TrainerOutput @resolver(class: "\\Icube\\TrainingApiGraphql\\Model\\Resolver\\AddTrainer") @doc(description:"add trainer")
+    deleteTrainerById(id: Int!): TrainerOutput @resolver(class: "\\Icube\\TrainingApiGraphql\\Model\\Resolver\\DeleteTrainerById") @doc(description:"delete trainer by id")
 }
 
 input AddTrainerInput {
