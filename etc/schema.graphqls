@@ -1,16 +1,16 @@
 type Query {
-    getTrainerById(id: Int!): TrainerOutput @resolver(class: "\\Icube\\TrainingAPiGraphQl\\Model\\Resolver\\GetTrainerById") @doc(description: "The getTrainerById query returns information about a trainer")
+    getTrainerById(id: Int!): TrainerOutput @resolver(class: "\\Icube\\TrainingApiGraphql\\Model\\Resolver\\GetTrainerById") @doc(description: "The getTrainerById query returns information about a trainer")
     searchTrainer(
         search: String @doc(description: "search by trainer name."),
         filter: TrainerFilterInput @doc(description: "Identifies which product attributes to search for and return."),
         pageSize: Int = 5 @doc(description: "Specifies the maximum number of results to return at once. This attribute is optional."),
         currentPage: Int = 1 @doc(description: "Specifies which page of results to return. The default value is 1."),
         sort: TrainerSortInput @doc(description: "Specifies which attributes to sort on, and whether to return the results in ascending or descending order.")
-    ): TrainersOutput @resolver(class: "\\Icube\\TrainingApiGraphQl\\Model\\Resolver\\SearchTrainer") @doc(description: "The searchTrainer query returns information about a trainer")
+    ): TrainersOutput @resolver(class: "\\Icube\\TrainingApiGraphql\\Model\\Resolver\\SearchTrainer") @doc(description: "The searchTrainer query returns information about a trainer")
 }
 
 type Mutation {
-    addTrainer(input: AddTrainerInput!): TrainerOutput @resolver(class: "\\Icube\\TrainingAPiGraphQl\\Model\\Resolver\\AddTrainer") @doc(description:"add trainer")
+    addTrainer(input: AddTrainerInput!): TrainerOutput @resolver(class: "\\Icube\\TrainingApiGraphql\\Model\\Resolver\\AddTrainer") @doc(description:"add trainer")
 }
 
 input AddTrainerInput {
