@@ -52,7 +52,9 @@ class GetTrainerById implements ResolverInterface
 
         $trainerManagement = $this->trainerManagement->create();
         $trainer = $trainerManagement->getTrainerById(@$args["id"]);
+        $data = $trainer->getData();
+        $data['model'] = $trainer;
 
-        return $trainer;
+        return $data;
     }
 }
