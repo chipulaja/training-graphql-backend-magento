@@ -10,7 +10,7 @@ cd app/code/Icube
 git clone https://github.com/chipulaja/training-graphql-backend-magento.git TrainingApiGraphql
 cd TrainingApiGraphql
 git fetch origin
-checkout apigraphql
+git checkout apigraphql
 cd ../../../../
 bin/magento setup:upgrade --keep-generated
 bin/magento setup:di:compile
